@@ -68,8 +68,8 @@ class URLExtract:
         # get directory for cached file
         dir_path = os.path.dirname(__file__)
         if not os.access(dir_path, os.W_OK):
-            # get path to home dir
-            dir_path = os.path.expanduser('~')
+            # get path to tmp dir
+            dir_path = os.path.expanduser('/tmp')
 
         # full path for cached file with list of TLDs
         self._tld_list_path = os.path.join(dir_path, self._CACHE_FILE_NAME)
